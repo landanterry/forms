@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Input Form Elements">
+  <title>HTML Input Form Elements</title>
+</head>
+<body>
+  <h1>HTML Input Form Elements</h1>
+  
+  <!-- Form elements/tags create an HTML form -->
+  <!-- The Action attribute is where info is being sent or retrieved from (Ex: A Web address or URL) -->
+  <!-- The method attribute determines whether it will be sending data or just retrieving data/info (Ex: POST would be sending data to be stored. GET would just be retrieving data.) -->
+  <form action="https://www.espn.com/" method="GET"></form>
+
+  <h1>Login</h1>
+
+  <!-- Form elements/tags are block elements -->
+  <form>
+
+    <!-- Input elements are self-closing elements. Also, inputs use a "type" attribute which determines what type of input it will be. Also, input elements are inline elements. -->
+    <!-- Text Input (Most commonly used input) -->
+    <!-- The "placeholder" attribute will display the text in the input until the user starts typing inside the input -->
+    <!-- The "name" attribute is used to access what is entered into an input in a form -->
+    <input type="text" placeholder="Username" name="username">
+
+    <!-- Password Input (Hides user's entry) -->
+    <input type="password" placeholder="Password" name="password">
+
+    <!-- Submit Input in a form will submit the values in the other inputs that are also in the form -->
+    <!-- The text/content set for the value attribute will display in the submit input (NOTE: If the value attribute is NOT used, then Submit will display in the input.) -->
+    <input type="submit" value="Click Here To Submit">
+  </form>
+  
+  <!-- LABELS -->
+  <!-- Labels are used with Inputs to notify the user what an input is for (NOTE: Screen readers use labels to inform the user of what to enter into an input) -->
+  <label></label>
+
+  <!-- 1st way to use a label -->
+  <!-- Nesting an input inside of a label will link two together -->
+  <form>
+    <label>
+      First Name
+      <input type="text">
+    </label>
+  </form>
+
+  <!-- 2nd way to use a label -->
+  <!-- The "for" and "id" attributes can be used to link/bind a label to an input -->
+  <form>
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName">
+  </form>
+
+  <!-- Required Attribute -->
+  <!-- The "required" attribute requires the user to enter something in the input before the form can be submitted -->
+  <form>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" required>
+    <input type="submit">
+  </form>
+
+  <!-- Link Break -->
+  <input type="text">
+  <br>
+  <input type="text">
+
+  <h1>Other Inputs</h1>
+
+  <form>
+    <!-- Email Input (User's entry must be in email format) -->
+    <label for="userEmail">Email</label>
+    <input type="email" name="email" id="userEmail">
+
+    <br>
+
+    <!-- Checkbox Input -->
+    <input type="checkbox" name="agree" id="userAgree">
+    <label for="checkbox">Please check the box if you would be willing to be conts</label>
+
+    <br>
+
+    <!-- Radio Input -->
+    <!-- Radio Inputs must be linked together using the name attribute so that only one option can be selected -->
+    <!-- When a selected radio input in a form is submitted/sent what is sent the value set for the "value" attribute -->
+    <p>PIZZA TOPPINGS</p>
+    <input type="radio" name="pizza" id="pepperoni" value="Pepperoni">
+    <label for="pepperoni">Pepperoni</label>
+    <br>
+    <input type="radio" name="pizza" id="sausage" value="Sausage">
+    <label for="sausage">Sausage</label>
+    <br>
+    <input type="radio" name="pizza" id="cheese" value="Cheese">
+    <label for="cheese">Cheese</label>
+
+    <br>
+    
+    <!-- Number Input -->
+    <!-- The "value" attribute is used to set a preset number/value -->
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" value="35">
+
+    <br>
+
+    <!-- Date Input -->
+    <!-- The "value" attribute is used to set a preset date (NOTE: Must be in yyyy-mm-dd format) -->
+    <label for="today">Today's Date</label>
+    <input type="date" name="today" id="today" value="2023-08-28">
+
+    <br>
+
+    <!-- Color Input -->
+    <label for="favColor">Favorite Color</label>
+    <input type="color" name="color" id="favColor">
+
+    <br>
+
+    <input type="submit">
+  </form>
+
+</body>
+</html>
